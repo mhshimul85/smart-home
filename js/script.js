@@ -31,25 +31,25 @@ $(document).ready(function(){
   //$('.text').text(relayOne+' '+relayTwo+' '+relayThree+' '+relayFour);
   // Code for realtime switch mode change
   function x(){
-    if(relayOne == 1){
+    if(relayOne == "1"){
       $('.relayOne').attr('checked','checked');
     } else {
       $('.relayOne').removeAttr('checked');
     }
 
-    if(relayTwo == 1){
+    if(relayTwo == "1"){
       $('.relayTwo').attr('checked','checked');
     } else {
       $('.relayTwo').removeAttr('checked');
     }
 
-    if(relayThree == 1){
+    if(relayThree == "1"){
       $('.relayThree').attr('checked','checked');
     } else {
       $('.relayThree').removeAttr('checked');
     }
 
-    if(relayFour == 1){
+    if(relayFour == "1"){
       $('.relayFour').attr('checked','checked');
     } else {
       $('.relayFour').removeAttr('checked');
@@ -79,10 +79,10 @@ $(document).ready(function(){
       default:;
     }
     // Updating the relay values
-    if(relay == 1){
-		  firebaseRef.set(0);
+    if(relay == "1"){
+		  firebaseRef.set("0");
 		} else {
-		  firebaseRef.set(1);
+		  firebaseRef.set("1");
     }
   });
 
